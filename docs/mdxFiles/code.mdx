@@ -1,0 +1,50 @@
+---
+title: Amazon Clone App Flutter Code Snippets
+description: Share code snippets from the Amazon Clone App project developed in Flutter.
+---
+
+# Amazon Clone App Flutter Code Snippets
+
+In this section, we'll share some code snippets from the Amazon Clone App project developed in Flutter. These snippets showcase key functionalities and implementation details of the app.
+
+## User Authentication
+
+### Sign Up Screen Widget
+
+```dart
+import 'package:flutter/material.dart';
+
+class SignUpScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sign Up'),
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextField(
+              decoration: InputDecoration(labelText: 'Email'),
+            ),
+            SizedBox(height: 10.0),
+            TextField(
+              decoration: InputDecoration(labelText: 'Password'),
+              obscureText: true,
+            ),
+            SizedBox(height: 10.0),
+            // Additional input fields for name, contact information, etc.
+            ElevatedButton(
+              onPressed: () {
+                // Implement sign up logic
+              },
+              child: Text('Sign Up'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
